@@ -452,6 +452,7 @@ fun SearchScreen(
                             TrackItem(
                                 track = track,
                                 onClick = { selectedTrack ->
+                                    searchViewModel.saveQueryToHistory(text)
                                     onTrackClick(selectedTrack)
                                 }
                             )
